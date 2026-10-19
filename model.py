@@ -18,8 +18,14 @@ def prod(shape):
     # return reduce(lambda a, b: a * b, shape, 1)
     return reduce(mul, shape, 1)
 
-# Step 2 - argsort (not yet solved)
-# TODO: implement
+# Step 2 - argsort
+def argsort(values):
+    # TODO: Return the indices that would sort values in ascending order.
+    """
+    sorted(..., key=lambda i: values[i]) 按照每个位置对应的值进行排序，返回的是排好序的位置列表，而不是值列表。
+    Python 的 sorted 是稳定排序：当 values[i] == values[j] 时，原始索引较小的会排在前面，满足题目对稳定性的要求。
+    """
+    return sorted(range(len(values)), key=lambda i: values[i])
 
 # Step 3 - make_op_enums (not yet solved)
 # TODO: implement
