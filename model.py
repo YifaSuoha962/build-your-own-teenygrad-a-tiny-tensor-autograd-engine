@@ -7,15 +7,16 @@ Assembled from your step-by-step solutions.
 import numpy as np
 
 # Step 1 - prod
+from functools import reduce
+from operator import mul
+
 def prod(shape):
     # TODO: Multiply together the elements of a shape tuple to get the total number of elements.
-    res = 1
     if shape is None:
-        return res
-    else:
-        for num in shape:
-            res *= num
-    return res
+        return 1
+    # 仅用 reduce
+    # return reduce(lambda a, b: a * b, shape, 1)
+    return reduce(mul, shape, 1)
 
 # Step 2 - argsort (not yet solved)
 # TODO: implement
