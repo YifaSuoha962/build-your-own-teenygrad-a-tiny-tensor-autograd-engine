@@ -22,8 +22,8 @@ def prod(shape):
 def argsort(values):
     # TODO: Return the indices that would sort values in ascending order.
     """
-    sorted(..., key=lambda i: values[i]) 按照每个位置对应的值进行排序，返回的是排好序的位置列表，而不是值列表。
-    Python 的 sorted 是稳定排序：当 values[i] == values[j] 时，原始索引较小的会排在前面，满足题目对稳定性的要求。
+    sorted(..., key=lambda i: values[i]) 按照每个位置对应的值大小进行排序，返回的是排好序的位置列表，而不是值列表。
+    Python 的 sorted 是稳定排序：当 values[i] == values[j] 时，保留原始索引的位置顺序。
     """
     return sorted(range(len(values)), key=lambda i: values[i])
 
